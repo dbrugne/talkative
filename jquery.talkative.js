@@ -1,19 +1,41 @@
 (function( $ ) {
 	'use strict';
 
-	$.fn.talkative = function() {
+	$.fn.talkative = function(options) {
+
+		var settings = $.extend({
+			selector: 'span',
+			start: 1000,  // first rotation after (ms)
+			delay: 4000, // delay between rotation (ms)
+			animation: true
+		}, options );
 
 		this.filter( "div, p" ).each(function() {
-			var e = $(this);
-			e.css('color', 'red');
+			var $e = $(this);
+			$e.css('color', 'red');
 
-			/**
-			 function getRandomFromArray(array){ //returns a random entry from an array
-				if(array instanceof HTMLCollection || array instanceof Array){
-					var n = Math.floor(Math.random()*array.length);
-					return array[n];
-				}
+			var alternatives = $e.find(settings.selector);
+			if (alternatives.length < 1)
+			  return;
+
+			var timeout = setTimeout(rotate, settings.start);
+
+			function rotate() {
+				var alternative = getRandomFromjQueryObject(alternatives);
+				if (!alternative)
+					return console.log('Unable to find next alternative for '+$e);
+
+				var $alternative = $(alternative);
+				console.log($alternative.text());
+
+				var timeout = setTimeout(rotate, settings.delay);
 			}
+
+			function getRandomFromjQueryObject(arr) {
+				for(var j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
+				return arr[0];
+			};
+			/**
 						 function transformById(elmtId, otherVerb, fadeDuration){ //replaces the innerHTML of the pased element by the passed string
 				if(!fadeDuration){
 					fadeDuration = 0;
