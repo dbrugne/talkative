@@ -34,7 +34,7 @@ $(document).on('ready', function() {
 
 });
 </script>
-``
+```
 
 ## Options
 
