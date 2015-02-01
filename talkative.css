@@ -21,6 +21,7 @@
     display: block;
     padding-top: 5px;
     padding-bottom: 5px;
+    text-shadow: none;
 }
 [data-toggle="talkative"] > div.talkative-container.roll > * {
     color: transparent;

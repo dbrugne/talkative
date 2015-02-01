@@ -43,13 +43,14 @@
 
 				// blur
 				$container.addClass('roll');
-				$container.css('text-shadow', '0 0 5px rgba('+rgba+')');
+				$(alternatives).css('text-shadow', '0 0 5px rgba('+rgba+')');
 
 				// animate
 				$container.animate({
 					'top': '-'+top+'px'
 				}, settings.animation_delay, function() {
 					$container.removeClass('roll');
+					$(alternatives).css('text-shadow', 'none');
 				});
 
 				//console.log($alternative.text(),top);
