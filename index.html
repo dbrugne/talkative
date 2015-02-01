@@ -1,26 +1,39 @@
 <!doctype html>
-<html lang="fr">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>DONUT - Discussions instantanées autour de vos centres d&#39;intérêt</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Talkative demo</title>
+    <style>
+        .text p{
+            font-size:3em;
+        }
+    </style>
 </head>
 <body>
-<div id="landing">
-    <div class="header">
-        <div class="cover">
-            <div class="text">
+<div id="my">
+    <div class="complex">
+        <div class="dom">
+            <div class="structure">
                 <p>DONUT vous permet</p>
-                <p id="verb">de discuter</p>
+                <p data-toggle="talkative">de discuter</p>
                 <p>autour</p>
-                <p id="interest">vos centres d'intérêt</p>
+                <p data-toggle="talkative">vos centres d'intérêt</p>
                 <p>et d'animer</p>
-                <p id="target">vos communautés !</p>
+                <p data-toggle="talkative">vos communautés !</p>
             </div>
-            <a href="#knowmore" class="btn-knowmore">en savoir +</a>
-	       </div>
+        </div>
 	  </div>
 </div>
-<script type="text/javascript" src="talkative.js"></script>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="./jquery.talkative.js"></script>
+<script>
+$(document).on('ready', function() {
+
+    $(function () {
+        $('[data-toggle="talkative"]').talkative();
+    });
+
+});
+</script>
 </body>
 </html>
