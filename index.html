@@ -6,12 +6,13 @@
     <style>
         [data-toggle="talkative"] {
             overflow: hidden;
+            padding-top: 0;
+            padding-bottom: 0;
         }
         [data-toggle="talkative"] span {
-            display: none;
+            display: block;
         }
         [data-toggle="talkative"] > :first-child {
-            display: block;
         }
     </style>
 </head>
@@ -123,8 +124,8 @@ $(document).on('ready', function() {
 
     $(function () {
         $('[data-toggle="talkative"]').talkative({
-            start: 200,
-            delay: 500
+            start: 2000,
+            delay: 4000
         });
     });
 

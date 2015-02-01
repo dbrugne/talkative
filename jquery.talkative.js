@@ -11,19 +11,23 @@
 		}, options );
 
 		this.filter( "div, p" ).each(function() {
-			var $e = $(this);
-			$e.css('color', 'red');
+			var $el = $(this);
+			$el.css('color', 'red');
 
-			var alternatives = $e.find(settings.selector);
+			var alternatives = $el.find(settings.selector);
 			if (alternatives.length < 1)
 			  return;
 
-			var timeout = setTimeout(rotate, settings.start);
+			// adjust container height
+			var $first = $(alternatives[0]);
+			var h = $first.outerHeight(true); // full element height including margins
+			$el.innerHeight(h);
 
+			var timeout = setTimeout(rotate, settings.start);
 			function rotate() {
 				var alternative = getRandomFromjQueryObject(alternatives);
 				if (!alternative)
-					return console.log('Unable to find next alternative for '+$e);
+					return console.log('Unable to find next alternative for '+$el);
 
 				var $alternative = $(alternative);
 				console.log($alternative.text());
@@ -31,10 +35,6 @@
 				var timeout = setTimeout(rotate, settings.delay);
 			}
 
-			function getRandomFromjQueryObject(arr) {
-				for(var j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
-				return arr[0];
-			};
 			/**
 						 function transformById(elmtId, otherVerb, fadeDuration){ //replaces the innerHTML of the pased element by the passed string
 				if(!fadeDuration){
@@ -87,9 +87,13 @@
 					}
 				}
 			}
-			 startTalkative();
 			 */
 		});
+
+		function getRandomFromjQueryObject(arr) {
+			for(var j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
+			return arr[0];
+		};
 
 		return this;
 
