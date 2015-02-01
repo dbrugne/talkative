@@ -31,6 +31,7 @@
 			var h = $first.outerHeight(true); // full element height including margins
 			$el.innerHeight(h);
 
+			var current = '0'; // first element is "top: 0"
 			var timeout = setTimeout(rotate, settings.start);
 			function rotate() {
 				var alternative = getRandomFromjQueryObject(alternatives);
@@ -40,6 +41,11 @@
 				// calculate alternative position
 				var $alternative = $(alternative);
 				var top = $alternative.position().top;
+
+				if (current == top) {
+					timeout = setTimeout(rotate, settings.delay);
+					return;
+				}
 
 				// blur
 				$container.addClass('roll');
@@ -53,9 +59,8 @@
 					$(alternatives).css('text-shadow', 'none');
 				});
 
-				//console.log($alternative.text(),top);
-
-				var timeout = setTimeout(rotate, settings.delay);
+				current = top;
+				timeout = setTimeout(rotate, settings.delay);
 			}
 		});
 
