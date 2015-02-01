@@ -1,0 +1,188 @@
+<talkative>
+	<cs> <!-- configs -->
+		<verbTimer>4000</verbTimer>
+		<interestTimer>4000</interestTimer>
+		<targetTimer>4000</targetTimer>
+		<fadeDuration>500</fadeDuration>
+		<startingDelay>1000</startingDelay>
+	</cs>
+	<fr>
+		<vl> <!-- verb list-->
+			<v>de discuter</v>
+			<v>de bavarder</v>
+			<v>de blaguer</v>
+			<v>d'argumenter</v>
+			<v>de déconner</v>
+			<v>de partager</v>
+			<v>de faire connaissance</v>
+			<v>de se passionner</v>
+			<v>de se retrouver</v>
+			<v>de converser</v>
+			<v>de dialoguer</v>
+			<v>de communiquer</v>
+			<v>d'épiloguer</v>
+			<v>de délirer</v>
+		</vl>
+		<il> <!-- interest list-->
+			<i>de vos intérêts</i>
+			<i>de la pêche</i>
+			<i>des mangas</i>
+			<i>de la mecanique</i>
+			<i>des jeux vidéos</i>
+			<i>du foot</i>
+			<i>du sport</i>
+			<i>de la patate</i>
+			<i>des chats</i>
+			<i>des animaux</i>
+			<i>des pompes à vélo</i>
+			<i>de la cuisine</i>
+			<i>de vos projets</i>
+			<i>de vos histoires</i>
+			<i>du cosplay</i>
+			<i>de l'electronique</i>
+			<i>des pandas</i>
+			<i>de l'e-sport</i>
+			<i>du poker</i>
+			<i>du paintball</i>
+			<i>des glands</i>
+			<i>de l'art</i>
+			<i>de vos séries préférées</i>
+			<i>de vos livres préférés</i>
+			<i>de la musique</i>
+			<i>des pokemons</i>
+			<i>de vos films favoris</i>
+			<i>du surf</i>
+			<i>du jazz</i>
+			<i>du tarot</i>
+			<i>des mathématiques</i>
+			<i>de n'importe quoi</i>
+			<i>du tissage</i>
+			<i>de la couture</i>
+			<i>du tricot</i>
+			<i>des camions</i>
+			<i>de l'eau minérale</i>
+			<i>de la physique quantique</i>
+			<i>de la philosophie</i>
+			<i>de la topologie</i>
+			<i>des sciences</i>
+			<i>de l'informatique</i>
+			<i>du metal</i>
+			<i>de l'apiculture</i>
+			<i>des timbres</i>
+			<i>des cartes postales</i>
+			<i>des motos</i>
+			<i>de l'enseignement</i>
+			<i>de l'économie</i>
+			<i>de la musique classique</i>
+			<i>du Droit</i>
+		</il>
+		<tl> <!-- target list -->
+			<t>vos amis</t>
+			<t>vos familles</t>
+			<t>vos communautés</t>
+			<t>vos associations</t>
+			<t>vos potes</t>
+			<t>vos nouvelles connaissances</t>
+			<t>vos frêres et soeurs</t>
+			<t>vos fans</t>
+			<t>vos followers</t>
+			<t>vos grand-parents</t>
+			<t>vos parents</t>
+			<t>vos élèves</t>
+			<t>vos enfants</t>
+			<t>vos connaissances</t>
+			<t>vos collègues</t>
+			<t>vos cousins et cousines</t>
+			<t>vos semblables</t>
+			<t>vos voisins</t>
+		</tl>
+	</fr>
+	<en>
+		<vl>
+			<v>chat</v>
+			<v>talk</v>
+			<v>discuss</v>
+			<v>chatter</v>
+			<v>gossip</v>
+			<v>express yourself</v>
+			<v>speak</v>
+			<v>think</v>
+			<v>share opinions</v>
+			<v>debate</v>
+			<v>joke</v>
+			<v>laugh</v>
+		</vl>
+		<il>
+			<i>your interests</i>
+			<i>fishing</i>
+			<i>mangas</i>
+			<i>mechanics</i>
+			<i>video games</i>
+			<i>du foot</i>
+			<i>soccer</i>
+			<i>potatoes</i>
+			<i>cats</i>
+			<i>animals</i>
+			<i>bycicle pumps</i>
+			<i>cooking</i>
+			<i>your projects</i>
+			<i>your stories</i>
+			<i>cosplay</i>
+			<i>electronics</i>
+			<i>pandas</i>
+			<i>e-sport</i>
+			<i>poker</i>
+			<i>paintball</i>
+			<i>acorns</i>
+			<i>Art</i>
+			<i>Law</i>
+			<i>your favorite series</i>
+			<i>your favorite books</i>
+			<i>music</i>
+			<i>pokemons</i>
+			<i>your favorite movies</i>
+			<i>surf</i>
+			<i>jazz</i>
+			<i>tarot</i>
+			<i>mathematics</i>
+			<i>anything</i>
+			<i>weaving</i>
+			<i>sewing</i>
+			<i>knitting</i>
+			<i>trucks</i>
+			<i>mineral water</i>
+			<i>quantum physics</i>
+			<i>philosophy</i>
+			<i>topology</i>
+			<i>science</i>
+			<i>computer science</i>
+			<i>agriculture</i>
+			<i>stamps</i>
+			<i>postcards</i>
+			<i>motorbikes</i>
+			<i>education</i>
+			<i>the economy</i>
+			<i>classical music</i>
+		</il>
+		<tl>
+			<t>your friends</t>
+			<t>your families</t>
+			<t>your communities</t>
+			<t>your associations</t>
+			<t>your buddies</t>
+			<t>your new acquaintances</t>
+			<t>your brothers and sisters</t>
+			<t>your fans</t>
+			<t>your followers</t>
+			<t>your grand-parents</t>
+			<t>your parents</t>
+			<t>your pupils</t>
+			<t>your children</t>
+			<t>your acquaintances</t>
+			<t>your colleagues</t>
+			<t>your cousins</t>
+			<t>your fellows</t>
+			<t>your neighbours</t>
+		</tl>
+	</en>
+</talkative>
