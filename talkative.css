@@ -4,23 +4,24 @@
     padding-bottom: 0;
     position: relative;
 }
-[data-toggle="talkative"] > span {
+[data-toggle="talkative"] > * {
     display: none;
     padding-top: 5px;
-    padding-top: 5px;
-}
-[data-toggle="talkative"] > div {
-    position: absolute;
-}
-[data-toggle="talkative"] > div > span {
-    display: block;
-    padding-top: 5px;
-    padding-top: 5px;
-}
-[data-toggle="talkative"] > div.roll > span {
-    color: transparent;
-    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    padding-bottom: 5px;
 }
 [data-toggle="talkative"] > :first-child {
+     display: block;
+ }
+[data-toggle="talkative"] > div.talkative-container {
+    position: absolute;
     display: block;
+    padding: 0;
+}
+[data-toggle="talkative"] > div.talkative-container > * {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+[data-toggle="talkative"] > div.talkative-container.roll > * {
+    color: transparent;
 }

@@ -22,8 +22,8 @@
 			if (alternatives.length < 1)
 			  return;
 
-			var $container = $('<div></div>').appendTo($el);
-			var color = $container.css('color');
+			var $container = $('<div class="talkative-container"></div>').appendTo($el);
+			var rgba = $container.css('color').replace('rgb(', '').replace(')', ', 0.5');
 			$(alternatives).prependTo($container);
 
 			// adjust container height
@@ -43,6 +43,7 @@
 
 				// blur
 				$container.addClass('roll');
+				$container.css('text-shadow', '0 0 5px rgba('+rgba+')');
 
 				// animate
 				$container.animate({
