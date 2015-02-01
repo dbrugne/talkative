@@ -7,7 +7,7 @@
 			selector: 'span',
 			start: 1000,  // first rotation after (ms)
 			delay: 4000, // delay between rotation (ms)
-			animation_delay: 1000
+			animation_delay: 600
 		}, options );
 
 		if (settings.animation_delay < 100)
