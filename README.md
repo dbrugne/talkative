@@ -34,16 +34,16 @@ $(document).on('ready', function() {
 
 });
 </script>
-```
+``
 
 ## Options
 
 Following options could be passed to the talkative function:
 
-* selector: selector to find nested alternate element (default: *span*),
-* start: delay before starting first rolling (in ms, default: *1000*),
-* delay: delay between rotation (in ms, default: *4000*),
-* animation_delay: duration of the animation, should be longer that ``delay`` (in ms, default: *1000*)
+- **selector**: selector to find nested alternate element (default: *span*),
+- **start**: delay before starting first rolling (in ms, default: *1000*),
+- **delay**: delay between rotation (in ms, default: *4000*),
+- **animation_delay**: duration of the animation, should be longer that ``delay`` (in ms, default: *1000*)
 
 ## About the original author
 This was freely and happily made by Maaya for the donut.me team.
