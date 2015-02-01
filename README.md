@@ -25,16 +25,14 @@ And finally launch rotation:
 <script>
 $(document).on('ready', function() {
 
-    $(function () {
-        $('[data-toggle="talkative"]').talkative({
-            start: 2000,
-            delay: 4000
-        });
+    $('[data-toggle="talkative"]').talkative({
+        start: 2000,
+        delay: 4000
     });
 
 });
 </script>
-``
+```
 
 ## Options
 
