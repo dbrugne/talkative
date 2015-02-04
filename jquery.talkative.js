@@ -19,17 +19,16 @@
 		this.filter( "div, p" ).each(function() {
 			var $el = $(this);
 
-			var alternatives = $el.find(settings.selector);
-			if (alternatives.length < 1)
+			var $alternatives = $el.find(settings.selector);
+			if ($alternatives.length < 1)
 			  return;
 
 			var $container = $('<div class="talkative-container"></div>').appendTo($el);
 			var rgba = $container.css('color').replace('rgb(', '').replace(')', ', 0.5');
-			var $alternatives = $(alternatives);
 			$alternatives.prependTo($container);
 
 			// adjust container height
-			var $first = $(alternatives[0]);
+			var $first = $($alternatives[0]);
 			var h = $first.outerHeight(true); // full element height including margins
 			$el.innerHeight(h);
 
@@ -42,9 +41,9 @@
 				// choose next
 				var next;
 				if (settings.mode == 'random')
-					next = getRandomFromjQueryObject(alternatives);
+					next = getRandomFromjQueryObject($alternatives, $current);
 				else
-					next = getNextFromjQueryObject(alternatives, $current);
+					next = getNextFromjQueryObject($alternatives, $current);
 				if (!next)
 					return console.log('Unable to find next alternative for ', $el);
 
@@ -76,20 +75,28 @@
 			}
 		});
 
-		function getNextFromjQueryObject(o, current) {
-			var nextIndex = o.index(current) + 1;
+		function getNextFromjQueryObject($alternatives, $current) {
+			var nextIndex = $alternatives.index($current) + 1;
 
 			// end of list
-			if (nextIndex >= o.length) {
+			if (nextIndex >= $alternatives.length) {
 				nextIndex = 0;
 			}
 
-			return o[nextIndex];
+			return $alternatives[nextIndex];
 		}
 
-		function getRandomFromjQueryObject(o) {
-			for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-			return o[0];
+		function getRandomFromjQueryObject($alternatives, $current) {
+			// returns a random integer between min (inclusive, 0) and max (exclusive, length)
+			var nextIndex = Math.floor(Math.random() * ($alternatives.length - 0) + 0);
+
+			// next is the current
+			var currentIndex = $alternatives.index($current);
+			if (nextIndex === currentIndex) {
+				return getRandomFromjQueryObject($alternatives, $current);
+			}
+
+			return $alternatives[nextIndex];
 		};
 
 		return this;
