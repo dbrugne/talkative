@@ -44,8 +44,3 @@ Following options could be passed to the talkative function:
 - **animation_delay**: duration of the animation, should be longer that ``delay`` (in ms, default: *1000*)
 - **mode**: how the plugin chosse next content to rotate, ``random`` or ``natural`` (default: ``natural``)
 
-## About the original author
-This was freely and happily made by Maaya for the donut.me team.
-I put no licence on this, fork, change, use and do what you want.
-
-Feel free to contact me for questions, thanks, or insults at maaya.code.dev@gmail.com (if any).
